@@ -12,11 +12,11 @@ const NewsItem = (props) => {
         </span>
         <img src={props.imageUrl} className="card-img-top" alt="..." style={{height : "210px", objectFit: "cover"}} />
         <div
-          className="card-body "
+          className="card-body  "
           style={{
             backgroundColor: props.mode === "dark" ? "#151617" : "white",
             color: props.mode === "dark" ? "white" : "black",
-            height: "280px",
+            minHeight: "280px",
             
           }}
         >
@@ -33,6 +33,7 @@ const NewsItem = (props) => {
               By {props.author} on {new Date(props.date).toLocaleString()}
             </small>
           </p>
+          <div className="d-flex justify-content-end">
           <a
             style={{
               backgroundColor: props.mode === "dark" ? "white" : "black",
@@ -43,10 +44,11 @@ const NewsItem = (props) => {
             rel="noreferrer"
             href={props.newsUrl}
             target="_blank"
-            className="btn btn-dark"
+            className="btn btn-dark "
           >
             Read more
           </a>
+          </div>
         </div>
       </div>
     </div>
