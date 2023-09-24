@@ -23,7 +23,7 @@ const News = (props) => {
     props.setProgress(100);
   };
   useEffect(() => {
-    document.title = `${capitalize(props.category)}  - News Reaper`;
+    document.title = `${capitalize(props.category=="general"?"home":props.category)}  - News Reaper`;
     updateNews();
     // eslint-disable-next-line
   }, []);
