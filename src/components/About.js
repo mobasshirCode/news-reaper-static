@@ -5,13 +5,13 @@ export default function About(props) {
   document.title = "About - News Reaper";
   let myStyle = {
     color: props.mode === "light" ? "#030a24" : "white",
-    backgroundColor: props.mode === "light" ? "#d4ddfa" : "#162533",
+    backgroundColor: props.mode === "light" ? "#d4ddfa" : "#162533", 
   };
 
   return (
     <>
       <div className="container" style={myStyle}>
-        <h1 className="my-3">About News Reaper</h1>
+        <h1 style={{margin:"80px 0 20px 0"}}>About News Reaper</h1>
         <div className="accordion" id="accordionExample">
           <div className="accordion-item" style={{ border: "1px solid white" }}>
             <h2 className="accordion-header">
